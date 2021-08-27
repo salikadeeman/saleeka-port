@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #111;
+    background: #fff;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 60px;
+        /*top : 80*/
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked~ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: cyan;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(243, 241, 241);
+    /* background-color: aquamarine; */
+}
+
+.content .image-content {
+    width: 100%;
+    height: 300px;
+    /* background-color: rgb(210, 255, 127); */
+}
+
+.content .image-content img {
+    margin-top: 10px;
+    margin-left: 550px;
+    height: 275px;
+    width: 275px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.content .text-content {
+    width: 100%;
+    height: 300px;
+    /* background-color: rgb(127, 150, 255); */
+}
+
+.content .text-content h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.content .text-content p {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 920px) {
+    .content {
+        width: 100%;
+        height: 752px;
+    }
+    .content .image-content {
+        width: 100%;
+        height: 376px;
+    }
+    .content .image-content img {
+        margin-top: 40px;
+        margin-left: 40px;
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        border: 2px solid violet;
+    }
+    .content .text-content {
+        width: 100%;
+        height: 376px;
+    }
+    .content .text-content h1 {
+        padding: 20px;
+        text-align: center;
+    }
+    .content .text-content p {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+/* Footer Part */
+
+#main-footer {
+    margin-top: -100px;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+#main-footer p {
+    color: #475569;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+.centerdiv {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerdiv a {
+    height: 60px;
+    width: 60px;
+    /* background-color: #f5f6fa; */
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+    line-height: 60px;
+    /*box-shadow: 1px 4px 2px 2px ;*/
+}
+
+a i {
+    transition: all 0.3s linear;
+}
+
+a:hover i {
+    transform: scale(1.2);
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-instagram {
+    color: #e84393;
+}
+
+.fa-linkedin {
+    color: #0097e6;
+}
