@@ -188,8 +188,8 @@ input[type="checkbox"] {
 }
 
 #main-footer p {
-    color: #475569;
-    padding-top: 15px;
+    color: #111;
+    /* padding-top: 15px; */
     font-size: 16px;
 }
 
